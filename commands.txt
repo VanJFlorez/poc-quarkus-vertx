@@ -1,11 +1,19 @@
+
+~~~powershell
 mvn io.quarkus:quarkus-maven-plugin:1.7.3.Final:create 
 "-DprojectGroupId=org.acme" 
 "-DprojectArtifactId=getting-started" 
 "-DclassName=org.acme.getting.started.GreetingResource" 
 "-Dpath=/hello"
+~~~
 
 https://quarkus.io/guides/maven-tooling
 
 ./mvnw compile quarkus:dev
 curl -w "\n" http://localhost:8080/hello/greeting/quarkus
 
+
+~~~cmd
+mvn io.quarkus:quarkus-maven-plugin:1.8.0.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=rest-json-quickstart -DclassName="org.acme.rest.json.FruitResource" -Dpath="/fruits" -Dextensions="resteasy-jsonb"
+~~~
+cd rest-json-quickstart
