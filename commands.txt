@@ -16,4 +16,6 @@ curl -w "\n" http://localhost:8080/hello/greeting/quarkus
 ~~~cmd
 mvn io.quarkus:quarkus-maven-plugin:1.8.0.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=rest-json-quickstart -DclassName="org.acme.rest.json.FruitResource" -Dpath="/fruits" -Dextensions="resteasy-jsonb"
 ~~~
+./mvnw compile quarkus:dev
+http://localhost:8080/
 cd rest-json-quickstart
