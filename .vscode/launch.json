@@ -12,6 +12,14 @@
       "hostName": "localhost",
       "name": "Debug Quarkus application (rest-json-quickstart)",
       "port": 5005
+    },
+    {
+      "preLaunchTask": "quarkus:dev (getting-started-reactive)",
+      "type": "java",
+      "request": "attach",
+      "hostName": "localhost",
+      "name": "Debug Quarkus application (getting-started-reactive)",
+      "port": 5005
     }
   ]
 }
