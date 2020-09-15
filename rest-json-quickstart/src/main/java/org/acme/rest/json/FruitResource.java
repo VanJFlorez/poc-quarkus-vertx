@@ -12,6 +12,11 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.jboss.resteasy.annotations.jaxrs.PathParam;
+
+import io.smallrye.mutiny.Multi;
+import io.smallrye.mutiny.Uni;
+
 @Path("/fruits")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -39,5 +44,17 @@ public class FruitResource {
     public Set<Fruit> delete(Fruit fruit) {
         fruits.removeIf(existingFruit -> existingFruit.name.contentEquals(fruit.name));
         return fruits;
+    }
+
+    
+    @GET
+    @Path("/{name}")
+    public Uni<Fruit> getOne(@PathParam String name) {
+      return null; // findByName(name);
+    }
+
+    @GET
+    public Multi<Fruit> getAll() {
+      return null; // findAll();
     }
 }
