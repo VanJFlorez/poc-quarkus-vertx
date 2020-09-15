@@ -1,0 +1,8 @@
+mvn io.quarkus:quarkus-maven-plugin:1.7.3.Final:create 
+"-DprojectGroupId=org.acme" 
+"-DprojectArtifactId=getting-started" 
+"-DclassName=org.acme.getting.started.GreetingResource" 
+"-Dpath=/hello"
+
+https://quarkus.io/guides/maven-tooling
+
